@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0b0c946a-a3d0-4529-b572-b8088458e5d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/comment_filter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/directorScreenwriter_filter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/genre_filter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/movie_filter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/review_filter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/starring_filter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/user_filter.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rio_spider/pipelines/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rio_spider/tools/CookieGenrateScript.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rio_spider/tools/cookies.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rio_spider/middlewares/Cookies.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/middlewares/Cookies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rio_spider/middlewares/Proxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/middlewares/Proxy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rio_spider/pipelines/MovieItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/pipelines/MovieItem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rio_spider/pipelines/OtherItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/pipelines/OtherItem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rio_spider/pipelines/RepeatFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/pipelines/RepeatFilter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rio_spider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rio_spider/spiders/Douban_Movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/spiders/Douban_Movie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rio_spider/tools/selenium_tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/tools/selenium_tool.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="demo@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="demo@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="demo@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="demo: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/rio_spider" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZbMxl9pvkw45lnWzRxftUEzDin" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/rio_spider" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rio_spider" />
+      <recent name="$PROJECT_DIR$/rio_spider/middlewares" />
+      <recent name="$PROJECT_DIR$/rio_spider/middlewares/downloaderMiddlewares" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.RepeatFilter">
+    <configuration name="CookieGenrateScript" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="rio_spider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rio_spider/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rio_spider/tools/CookieGenrateScript.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RepeatFilter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="rio_spider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rio_spider/pipelines" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rio_spider/pipelines/RepeatFilter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.RepeatFilter" />
+        <item itemvalue="Python.CookieGenrateScript" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b0c946a-a3d0-4529-b572-b8088458e5d3" name="Default Changelist" comment="" />
+      <created>1585103588859</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585103588859</updated>
+      <workItem from="1585103590812" duration="1444000" />
+      <workItem from="1585107309734" duration="3503000" />
+      <workItem from="1585110925072" duration="283000" />
+      <workItem from="1585111210084" duration="3753000" />
+      <workItem from="1585127874982" duration="19349000" />
+      <workItem from="1585178841288" duration="16539000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="419" y="214" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585202609739">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state x="419" y="214" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.44.1920.1036@0.44.1920.1036" timestamp="1585202609739" />
+    <state x="632" y="347" width="613" height="435" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585188266048">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state x="632" y="347" width="613" height="435" key="#com.intellij.fileTypes.FileTypeChooser/0.44.1920.1036@0.44.1920.1036" timestamp="1585188266048" />
+    <state x="1224" y="311" key="FileChooserDialogImpl" timestamp="1585111206254">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state x="1224" y="311" key="FileChooserDialogImpl/0.44.1920.1036@0.44.1920.1036" timestamp="1585111206254" />
+    <state width="1872" height="244" key="GridCell.Tab.0.bottom" timestamp="1585198486598">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1872" height="244" key="GridCell.Tab.0.bottom/0.44.1920.1036@0.44.1920.1036" timestamp="1585198486598" />
+    <state width="1872" height="244" key="GridCell.Tab.0.center" timestamp="1585198486597">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1872" height="244" key="GridCell.Tab.0.center/0.44.1920.1036@0.44.1920.1036" timestamp="1585198486597" />
+    <state width="1872" height="244" key="GridCell.Tab.0.left" timestamp="1585198486596">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1872" height="244" key="GridCell.Tab.0.left/0.44.1920.1036@0.44.1920.1036" timestamp="1585198486596" />
+    <state width="1872" height="244" key="GridCell.Tab.0.right" timestamp="1585198486598">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1872" height="244" key="GridCell.Tab.0.right/0.44.1920.1036@0.44.1920.1036" timestamp="1585198486598" />
+    <state width="285" height="542" key="HiddenNamespacesPopup" timestamp="1585202617990">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="285" height="542" key="HiddenNamespacesPopup/0.44.1920.1036@0.44.1920.1036" timestamp="1585202617990" />
+    <state x="442" y="191" key="SettingsEditor" timestamp="1585112236103">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state x="442" y="191" key="SettingsEditor/0.44.1920.1036@0.44.1920.1036" timestamp="1585112236103" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/rio_spider$RepeatFilter.coverage" NAME="RepeatFilter Coverage Results" MODIFIED="1585198447640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rio_spider/pipelines" />
+    <SUITE FILE_PATH="coverage/rio_spider$CookieGenrateScript.coverage" NAME="CookieGenrateScript Coverage Results" MODIFIED="1585191875075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rio_spider/tools" />
+  </component>
+</project>
