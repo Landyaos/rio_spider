@@ -3,6 +3,7 @@ import random
 from rio_spider import settings
 import logging
 
+
 class MyCookiesMiddleware(object):
 
     def __init__(self):

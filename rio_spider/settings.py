@@ -67,6 +67,7 @@ DOWNLOADER_MIDDLEWARES = {
     #    'RioSpiderDownloaderMiddleware': 543,
     'rio_spider.middlewares.UserAgent.MyUserAgentMiddleware': 200,
     'rio_spider.middlewares.Cookies.MyCookiesMiddleware': 200,
+    'rio_spider.middlewares.Proxy.MyProxyMiddleware': 200,
 
 }
 
@@ -213,6 +214,8 @@ USER_AGENTS_POOL = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
     'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.163 Safari/535.1',
 ]
+
+PROXY_ADDRESS = 'http://127.0.0.1:5010/'
 
 ERR_MSG = [
     "{'msg': '检测到有异常请求从您的IP发出，请求暂时被拒绝。如果请求行为被确认为有害您的账号可能会被执行封禁', 'r': 1}",

@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b0c946a-a3d0-4529-b572-b8088458e5d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/comment_filter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/directorScreenwriter_filter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/genre_filter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/movie_filter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/review_filter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/starring_filter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rio_spider/duplicate/user_filter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rio_spider/pipelines/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rio_spider/tools/CookieGenrateScript.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rio_spider/tools/cookies.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rio_spider/middlewares/Cookies.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/middlewares/Cookies.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rio_spider/middlewares/Proxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/middlewares/Proxy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rio_spider/pipelines/MovieItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/pipelines/MovieItem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rio_spider/pipelines/OtherItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/pipelines/OtherItem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rio_spider/pipelines/RepeatFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/pipelines/RepeatFilter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rio_spider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rio_spider/spiders/Douban_Movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/spiders/Douban_Movie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rio_spider/tools/selenium_tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/rio_spider/tools/selenium_tool.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +51,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/rio_spider" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -89,14 +76,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/rio_spider" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../proxy_pool" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -172,7 +159,9 @@
       <workItem from="1585110925072" duration="283000" />
       <workItem from="1585111210084" duration="3753000" />
       <workItem from="1585127874982" duration="19349000" />
-      <workItem from="1585178841288" duration="16539000" />
+      <workItem from="1585178841288" duration="17361000" />
+      <workItem from="1585213317857" duration="4454000" />
+      <workItem from="1585300415130" duration="573000" />
     </task>
     <servers />
   </component>
@@ -181,6 +170,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/rio_spider" />
+    </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
     <state x="419" y="214" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585202609739">
@@ -191,34 +183,34 @@
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
     <state x="632" y="347" width="613" height="435" key="#com.intellij.fileTypes.FileTypeChooser/0.44.1920.1036@0.44.1920.1036" timestamp="1585188266048" />
-    <state x="1224" y="311" key="FileChooserDialogImpl" timestamp="1585111206254">
+    <state x="1224" y="311" width="432" height="502" key="FileChooserDialogImpl" timestamp="1585217965947">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state x="1224" y="311" key="FileChooserDialogImpl/0.44.1920.1036@0.44.1920.1036" timestamp="1585111206254" />
-    <state width="1872" height="244" key="GridCell.Tab.0.bottom" timestamp="1585198486598">
+    <state x="1224" y="311" width="432" height="502" key="FileChooserDialogImpl/0.44.1920.1036@0.44.1920.1036" timestamp="1585217965947" />
+    <state width="1872" height="244" key="GridCell.Tab.0.bottom" timestamp="1585205659637">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1872" height="244" key="GridCell.Tab.0.bottom/0.44.1920.1036@0.44.1920.1036" timestamp="1585198486598" />
-    <state width="1872" height="244" key="GridCell.Tab.0.center" timestamp="1585198486597">
+    <state width="1872" height="244" key="GridCell.Tab.0.bottom/0.44.1920.1036@0.44.1920.1036" timestamp="1585205659637" />
+    <state width="1872" height="244" key="GridCell.Tab.0.center" timestamp="1585205659635">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1872" height="244" key="GridCell.Tab.0.center/0.44.1920.1036@0.44.1920.1036" timestamp="1585198486597" />
-    <state width="1872" height="244" key="GridCell.Tab.0.left" timestamp="1585198486596">
+    <state width="1872" height="244" key="GridCell.Tab.0.center/0.44.1920.1036@0.44.1920.1036" timestamp="1585205659635" />
+    <state width="1872" height="244" key="GridCell.Tab.0.left" timestamp="1585205659634">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1872" height="244" key="GridCell.Tab.0.left/0.44.1920.1036@0.44.1920.1036" timestamp="1585198486596" />
-    <state width="1872" height="244" key="GridCell.Tab.0.right" timestamp="1585198486598">
+    <state width="1872" height="244" key="GridCell.Tab.0.left/0.44.1920.1036@0.44.1920.1036" timestamp="1585205659634" />
+    <state width="1872" height="244" key="GridCell.Tab.0.right" timestamp="1585205659636">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1872" height="244" key="GridCell.Tab.0.right/0.44.1920.1036@0.44.1920.1036" timestamp="1585198486598" />
+    <state width="1872" height="244" key="GridCell.Tab.0.right/0.44.1920.1036@0.44.1920.1036" timestamp="1585205659636" />
     <state width="285" height="542" key="HiddenNamespacesPopup" timestamp="1585202617990">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
     <state width="285" height="542" key="HiddenNamespacesPopup/0.44.1920.1036@0.44.1920.1036" timestamp="1585202617990" />
-    <state x="442" y="191" key="SettingsEditor" timestamp="1585112236103">
+    <state x="442" y="191" key="SettingsEditor" timestamp="1585227111955">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state x="442" y="191" key="SettingsEditor/0.44.1920.1036@0.44.1920.1036" timestamp="1585112236103" />
+    <state x="442" y="191" key="SettingsEditor/0.44.1920.1036@0.44.1920.1036" timestamp="1585227111955" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rio_spider$RepeatFilter.coverage" NAME="RepeatFilter Coverage Results" MODIFIED="1585198447640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rio_spider/pipelines" />
