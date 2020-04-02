@@ -17,3 +17,4 @@ def getCookies():
         for each in f.read().split(','):
             print(each+',')
 
+storeCookies()

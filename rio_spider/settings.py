@@ -19,11 +19,11 @@ BOT_NAME = 'rio_spider'
 SPIDER_MODULES = ['rio_spider.spiders']
 NEWSPIDER_MODULE = 'rio_spider.spiders'
 
-today = datetime.datetime.now()
+# today = datetime.datetime.now()
 # LOG_ENABLED = True
 # LOG_ENCODING = 'utf-8'
 # LOG_LEVEL = "INFO"
-# LOG_FILE = 'log/spider_{}-{}-{}.log'.format(today.year, today.month, today.day)
+# LOG_FILE = 'rio_spider/log/spider_{}-{}-{}.log'.format(today.year, today.month, today.day)
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'rio_spider (+http://www.yourdomain.com)'
@@ -37,7 +37,7 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 1
+DOWNLOAD_DELAY = 2
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 16
 # CONCURRENT_REQUESTS_PER_IP = 16
@@ -66,8 +66,8 @@ COOKIES_DEBUG = True
 DOWNLOADER_MIDDLEWARES = {
     #    'RioSpiderDownloaderMiddleware': 543,
     'rio_spider.middlewares.UserAgent.MyUserAgentMiddleware': 200,
-    'rio_spider.middlewares.Cookies.MyCookiesMiddleware': 200,
-    'rio_spider.middlewares.Proxy.MyProxyMiddleware': 200,
+    # 'rio_spider.middlewares.Cookies.MyCookiesMiddleware': 200,
+    # 'rio_spider.middlewares.Proxy.MyProxyMiddleware': 200,
 
 }
 
@@ -118,13 +118,11 @@ MYSQL_PASSWORD = ''
 MYSQL_CHARSET = 'utf8'
 
 ACCOUNTS = [
-    # {'user': '18340018316', 'password': 'doubanspider'},
-    # {'user': '13653399918', 'password': ''},
-    # {'user': '18340018118', 'password': '1997XIAO'},
-    # {'user': '13785902686', 'password': 'shijunyu'},
-    # {'user': '17731939681', 'password': 'shijunyu'},
-    # {'user': '18034556894', 'password': '123456789a'},
-    # {'user': '17731939290', 'password': ''},
+    {'user': '18340018316', 'password': 'doubanspider'},
+    {'user': '18340018118', 'password': '1997XIAO'},
+    {'user': '13785902686', 'password': 'shijunyu'},
+    {'user': '17731939681', 'password': 'shijunyu'},
+    {'user': '18034556894', 'password': '123456789a'},
 ]
 
 COOKIES_POOL = [

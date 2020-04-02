@@ -54,16 +54,17 @@ class DoubanMovieSpider(scrapy.Spider):
     def parse(self, response):
 
         logging.info('-----------------------------电影界面 获取json列表-----------------------------')
-
         result = json.loads(response.text)
-
-        for movie in result['data'][0:1]:
-            yield Request(
-                url=movie['url'],
-                meta={'data': movie},
-                callback=self.parse_movie_index_douban,
-                headers=self.header,
-            )
+        if result.get('data'):
+            for movie in result['data']:
+                yield Request(
+                    url=movie['url'],
+                    meta={'data': movie},
+                    callback=self.parse_movie_index_douban,
+                    headers=self.header,
+                )
+        else:
+            print(result)
 
     def parse_movie_index_douban(self, response):
 
@@ -226,7 +227,6 @@ class DoubanMovieSpider(scrapy.Spider):
                 awards += item[0] + ' ' + item[2] + ' ' + item[4] + ' ' + item[5] + ','
             else:
                 awards += item[0] + ' ' + item[2] + ' ' + item[4] + ','
-
 
         item_starring['foreign_name'] = foreign_name
         item_starring['cover_url'] = cover_url
