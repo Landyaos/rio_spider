@@ -112,93 +112,16 @@ ITEM_PIPELINES = {
 # DATABASE mysql
 MYSQL_HOST = '127.0.0.1'
 MYSQL_PORT = 3306
-MYSQL_DBNAME = 'demo'
+MYSQL_DBNAME = 'douban_spider'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = ''
 MYSQL_CHARSET = 'utf8'
 
 ACCOUNTS = [
-    {'user': '18340018316', 'password': 'doubanspider'},
-    {'user': '18340018118', 'password': '1997XIAO'},
-    {'user': '13785902686', 'password': 'shijunyu'},
-    {'user': '17731939681', 'password': 'shijunyu'},
-    {'user': '18034556894', 'password': '123456789a'},
 ]
 
 COOKIES_POOL = [
-            {'push_noty_num': '0',
-             'ap_v': '0,6.0',
-             'push_doumail_num': '0',
-             '__gads': 'ID=0dfdda91b09308a6:T=1585188907:S=ALNI_MZXeohVTVFQSSE9pRp9nFonGhVepg',
-             '_pk_ses.100001.8cb4': '*',
-             '_pk_ref.100001.8cb4': '%5B%22%22%2C%22%22%2C1585188907%2C%22https%3A%2F%2Faccounts.douban.com%2Fpassport%2Flogin%3Fsource%3Dmovie%22%5D',
-             'ck': 'CZIX',
-             '_pk_id.100001.8cb4': '4edf5f3a53f04c93.1585188907.1.1585188907.1585188907.',
-             'dbcl2': '"208735309:XhvRwIpk2ik"',
-             'bid': 'bYySfe7bvg4'},
-            {'push_noty_num': '0',
-             'ap_v': '0,6.0',
-             'push_doumail_num': '0',
-             '__yadk_uid': 'x7pHqxQkPmqroZSoqMtZa6fCROhP4TDd',
-             '__gads': 'ID=38edaff0aacabc36:T=1585188916:S=ALNI_MaegKxqfja84peu9gjw1FQ7GKEsZQ',
-             '_pk_ses.100001.8cb4': '*',
-             '_pk_ref.100001.8cb4': '%5B%22%22%2C%22%22%2C1585188916%2C%22https%3A%2F%2Faccounts.douban.com%2Fpassport%2Flogin%3Fsource%3Dmovie%22%5D',
-             'ck': 'ltbw',
-             '_pk_id.100001.8cb4': 'fa5eaf0073e94a0d.1585188916.1.1585188916.1585188916.',
-             'dbcl2': '"188523178:PdMhu8KbRxc"',
-             'bid': 'zF4XlNXEYCk'},
-            {'push_noty_num': '0',
-             'push_doumail_num': '0',
-             '__gads': 'ID=45cf638b12e1ef6f:T=1585189171:S=ALNI_MZJF7xPDJpHmFUThBTR8ipNWfQdkA',
-             '_pk_ses.100001.8cb4': '*',
-             'ap_v': '0,6.0',
-             '_pk_id.100001.8cb4': '719e1d5351d0b0f5.1585189171.1.1585189171.1585189171.',
-             '_pk_ref.100001.8cb4': '%5B%22%22%2C%22%22%2C1585189171%2C%22https%3A%2F%2Faccounts.douban.com%2Fpassport%2Flogin%3Fsource%3Dmovie%22%5D',
-             'ck': 'ZfNf',
-             'dbcl2': '"209146781:hi/wG/bD+Aw"',
-             'bid': '-sdm4-BB3mY'},
-            {'push_noty_num': '0',
-             'ap_v': '0,6.0',
-             'push_doumail_num': '0',
-             '__gads': 'ID=190a13eec18e76a4:T=1585189755:S=ALNI_MZgdxqsDBRjurtcazeDeBLULjr-vA',
-             '_pk_ses.100001.8cb4': '*',
-             '_pk_ref.100001.8cb4': '%5B%22%22%2C%22%22%2C1585189755%2C%22https%3A%2F%2Faccounts.douban.com%2Fpassport%2Flogin%3Fsource%3Dmovie%22%5D',
-             'ck': 'dPel',
-             '_pk_id.100001.8cb4': '209311d9c7499737.1585189755.1.1585189755.1585189755.',
-             'dbcl2': '"212636496:id9Ohv1Un5U"',
-             'bid': 'IJSGaJIu83c'},
-            {'push_noty_num': '0',
-             'push_doumail_num': '0',
-             '__gads': 'ID=96f14eeb7158d56a:T=1585189766:S=ALNI_Mb9_Ai6owYG_M4G3kWoqzUCbJg2nA',
-             '_pk_ses.100001.8cb4': '*',
-             'ap_v': '0,6.0',
-             '_pk_id.100001.8cb4': '1e0756a31017d477.1585189766.1.1585189766.1585189766.',
-             '_pk_ref.100001.8cb4': '%5B%22%22%2C%22%22%2C1585189766%2C%22https%3A%2F%2Faccounts.douban.com%2Fpassport%2Flogin%3Fsource%3Dmovie%22%5D',
-             'ck': 'qX49',
-             'dbcl2': '"212636713:UL1rkcUh2+w"',
-             'bid': 'JqkZ_g_VUr0'},
-            {'push_noty_num': '0',
-             'ap_v': '0,6.0',
-             'push_doumail_num': '0',
-             '__yadk_uid': 'GJBkB1iZPJATf8XX2CKBj54Km0CVQz8q',
-             '__gads': 'ID=14a02686b4e9dc38:T=1585189775:S=ALNI_MbaG_yBmzNYOP3nFvDcnwSb3f90LQ',
-             '_pk_ses.100001.8cb4': '*',
-             '_pk_ref.100001.8cb4': '%5B%22%22%2C%22%22%2C1585189775%2C%22https%3A%2F%2Faccounts.douban.com%2Fpassport%2Flogin%3Fsource%3Dmovie%22%5D',
-             'ck': 'eFjf',
-             '_pk_id.100001.8cb4': '4037bea330b16093.1585189775.1.1585189775.1585189775.',
-             'dbcl2': '"212636852:jE+FrsUjoCw"',
-             'bid': 'qOL4ksS4JY4'},
-            {'push_noty_num': '0',
-             'ap_v': '0,6.0',
-             'push_doumail_num': '0',
-             '__gads': 'ID=89de4b62c01120e1:T=1585189795:S=ALNI_MbKEQ8IwI0_7kia6b6V34zVYAnRIg',
-             '_pk_ses.100001.8cb4': '*',
-             '_pk_ref.100001.8cb4': '%5B%22%22%2C%22%22%2C1585189795%2C%22https%3A%2F%2Faccounts.douban.com%2Fpassport%2Flogin%3Fsource%3Dmovie%22%5D',
-             'ck': 'hIP8',
-             '_pk_id.100001.8cb4': 'd22f8951589cd153.1585189795.1.1585189795.1585189795.',
-             'dbcl2': '"214334353:l7Uh/GpWwMg"',
-             'bid': 'qt7NG2ILR84'}
-        ]
+]
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENTS_POOL = [
