@@ -23,28 +23,36 @@ class OtherItemPipeline(object):
     def process_item(self, item, spider):
         if isinstance(item, items.User):
             self._insert_user(item)
-            raise DropItem('Has Done')
+            raise DropItem('user: {} => Has Done'.format(item['username']))
+
         elif isinstance(item, items.Genre):
             self._insert_genre(item)
-            raise DropItem('Has Done')
+            raise DropItem('genre: {} => Has Done'.format(item['name']))
+
         elif isinstance(item, items.DirectorScreenwriter):
             self._insert_director_screenwriter(item)
-            raise DropItem('Has Done')
+            raise DropItem('director_screenwriter: {} => Has Done'.format(item['name']))
+
         elif isinstance(item, items.Starring):
             self._insert_starring(item)
-            raise DropItem('Has Done')
+            raise DropItem('starring: {} => Has Done'.format(item['name']))
+
         elif isinstance(item, items.MovieGenreRelation):
             self._insert_movie_gener_relation(item)
-            raise DropItem('Has Done')
+            raise DropItem('movie_genre_relation: {} - {} => Has Done'.format(item['movie_id'], item['genre']))
+
         elif isinstance(item, items.MovieDirectorRelation):
             self._insert_movie_director_relation(item)
-            raise DropItem('Has Done')
+            raise DropItem('movie_director_relation: {} - {} => Has Done'.format(item['movie_id'], item['director']))
+
         elif isinstance(item, items.MovieScreenwriterRelation):
             self._insert_movie_screenwriter_relation(item)
-            raise DropItem('Has Done')
+            raise DropItem(
+                'movie_screenwriter_relation: {} - {} => Has Done'.format(item['movie_id'], item['screenwriter']))
+
         elif isinstance(item, items.MovieStarringRelation):
             self._insert_movie_starring_relation(item)
-            raise DropItem('Has Done')
+            raise DropItem('movie_starring_relation: {} - {} => Has Done'.format(item['movie_id'], item['starring']))
         else:
             return item
 
@@ -60,11 +68,13 @@ class OtherItemPipeline(object):
         self.connect.commit()
 
     def _insert_genre(self, item):
-        sql = 'insert into genre(name) ' \
-              'value (%s);'
+        sql = 'insert into genre(name,foreign_name,description) ' \
+              'value (%s,%s,%s);'
 
         self.cursor.execute(sql, (
-            item['name']
+            item['name'],
+            item['foreign_name'],
+            item['description']
         ))
         self.connect.commit()
 

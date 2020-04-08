@@ -23,16 +23,10 @@ class CommentItemPipeline(object):
     def process_item(self, item, spider):
         if isinstance(item, items.Comment):
             self._insert_comment(item)
-            raise DropItem('Has Done')
+            raise DropItem('Comment : {} - {} => Has Done'.format(item['user_id'], item['movie_id']))
         return item
 
     def _insert_comment(self, item):
-        print(type(item['rate']))
-        print(type(item['votes']))
-        print(item['votes'])
-
-        sql_duplicate = ''
-
         sql = 'insert into comment(user_id,movie_id,rate,votes,content,date) ' \
               'value (%s,%s,%s,%s,%s,%s)'
         self.cursor.execute(sql, (

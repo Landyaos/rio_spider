@@ -37,10 +37,12 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 2
+# DOWNLOAD_DELAY = 2
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 16
 # CONCURRENT_REQUESTS_PER_IP = 16
+# DOWNLOAD_TIMEOUT = 10
+# RETRY_ENABLED = False
 
 # Disable cookies (enabled by default)
 COOKIES_ENABLED = True
@@ -65,10 +67,10 @@ COOKIES_DEBUG = True
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
     #    'RioSpiderDownloaderMiddleware': 543,
-    'rio_spider.middlewares.UserAgent.MyUserAgentMiddleware': 200,
-    # 'rio_spider.middlewares.Cookies.MyCookiesMiddleware': 200,
-    # 'rio_spider.middlewares.Proxy.MyProxyMiddleware': 200,
-
+    'rio_spider.middlewares.UserAgent.MyUserAgentMiddleware': 100,
+    'rio_spider.middlewares.Cookies.MyCookiesMiddleware': 100,
+    'rio_spider.middlewares.Proxy.MyProxyMiddleware': 100,
+    'scrapy.downloadermiddlewares.retry.RetryMiddleware': None
 }
 
 # Enable or disable extensions
@@ -80,11 +82,11 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'rio_spider.pipelines.RepeatFilter.RepeatFilterPipeline': 100,
-    'rio_spider.pipelines.MovieItem.MovieItemPipeline': 300,
-    'rio_spider.pipelines.CommentItem.CommentItemPipeline': 300,
-    'rio_spider.pipelines.ReviewItem.ReviewItemPipeline': 300,
-    'rio_spider.pipelines.OtherItem.OtherItemPipeline': 300,
+    # 'rio_spider.pipelines.RepeatFilter.RepeatFilterPipeline': 100,
+    # 'rio_spider.pipelines.MovieItem.MovieItemPipeline': 200,
+    # 'rio_spider.pipelines.CommentItem.CommentItemPipeline': 300,
+    # 'rio_spider.pipelines.ReviewItem.ReviewItemPipeline': 500,
+    # 'rio_spider.pipelines.OtherItem.OtherItemPipeline': 200,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -112,15 +114,26 @@ ITEM_PIPELINES = {
 # DATABASE mysql
 MYSQL_HOST = '127.0.0.1'
 MYSQL_PORT = 3306
-MYSQL_DBNAME = 'douban_spider'
+MYSQL_DBNAME = 'demo'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = ''
 MYSQL_CHARSET = 'utf8'
 
 ACCOUNTS = [
+    {'user': '13730551689', 'password': '135792468'},
+    {'user': '18730957026', 'password': '135792468'},
+    # {'user': '18340018316', 'password': '135792468'},
+
 ]
 
 COOKIES_POOL = [
+    {'__utmv': '30149280.21458', '__utmt': '1', '__utma': '30149280.6605842.1586051639.1586051639.1586051639.1',
+     'push_noty_num': '0', 'ap_v': '0,6.0', 'push_doumail_num': '0', '_pk_ses.100001.8cb4': '*', 'bid': '-OfT37ptx9w',
+     '_pk_ref.100001.8cb4': '%5B%22%22%2C%22%22%2C1586051638%2C%22https%3A%2F%2Faccounts.douban.com%2Fpassport%2Flogin%3Fsource%3Dmovie%22%5D',
+     'ck': 'V2yG', '__utmb': '30149280.2.10.1586051639',
+     '__utmz': '30149280.1586051639.1.1.utmcsr=accounts.douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/passport/login',
+     '_pk_id.100001.8cb4': 'dd5f1f836f484867.1586051638.1.1586051638.1586051638.', '__utmc': '30149280',
+     'dbcl2': '"214585653:DdrpjfRYKFE"'},
 ]
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -137,6 +150,8 @@ USER_AGENTS_POOL = [
 ]
 
 PROXY_ADDRESS = 'http://127.0.0.1:5010/'
+
+PROXY_API = 'https://dps.kdlapi.com/api/getdps/?orderid=998605446990168&num={}&pt=1&dedup=1&format=json&sep=1'
 
 ERR_MSG = [
     "{'msg': '检测到有异常请求从您的IP发出，请求暂时被拒绝。如果请求行为被确认为有害您的账号可能会被执行封禁', 'r': 1}",

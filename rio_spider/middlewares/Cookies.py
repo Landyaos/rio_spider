@@ -16,7 +16,7 @@ class MyCookiesMiddleware(object):
         :param spider:
         :return:
         """
-        request.cookies = random.choice(self.cookiesPool)
+        # request.cookies = random.choice(self.cookiesPool)
 
     def process_response(self, request, response, spider):
         """
@@ -38,15 +38,9 @@ class MyCookiesMiddleware(object):
             if '验证页面' in redirect_url:
                 # Cookies还能继续使用，针对账号进行的反爬虫。
                 print('当前Cookie无法使用，需要认证。')
-
             # 如果出现重定向，说明此次请求失败，继续获取一个新的Cookie，重新对此次请求request进行访问。
             request.cookies = random.choice(self.cookiesPool)
             # 返回值request: 停止后续的response中间件，而是将request重新放入调度器的队列中重新请求。
             return request
-        elif response.status == 200 and response.text in settings.ERR_MSG:
-            logging.warning(response.text)
-            request.cookies = random.choice(self.cookiesPool)
-            return request
-
         # 如果没有出现重定向，直接将response向下传递后续的中间件。
         return response

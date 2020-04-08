@@ -35,28 +35,29 @@ class DoubanMovieSpider(scrapy.Spider):
                          'genres={genre}'
 
         # 18 * 2 = 36 * 300 / 20 = 20
-        # yield Request(
-        #     url='https://movie.douban.com/j/new_search_subjects?sort=U&range=5,10&tags=电影&start=0&genres=剧情',
-        #     callback=self.parse,
-        #     headers=self.header,
-        # )
+        yield Request(
+            url='https://movie.douban.com/j/new_search_subjects?sort=U&range=5,10&tags=电影&start=0&genres=剧情',
+            callback=self.parse,
+            headers=self.header,
+        )
 
-        for s in sort:
-            for g in genre:
-                for n in range(20):
-                    yield Request(
-                        url=starter_douban.format(sort=s, genre=g, num=n * 20),
-                        meta={'url': starter_douban.format(sort=s, genre=g, num=n * 20)},
-                        callback=self.parse,
-                        headers=self.header,
-                    )
+        # for s in sort:
+        #     for g in genre:
+        #         for n in range(20):
+        #             yield Request(
+        #                 url=starter_douban.format(sort=s, genre=g, num=n * 20),
+        #                 meta={'url': starter_douban.format(sort=s, genre=g, num=n * 20)},
+        #                 callback=self.parse,
+        #                 headers=self.header,
+        #             )
 
     def parse(self, response):
 
         logging.info('-----------------------------电影界面 获取json列表-----------------------------')
         result = json.loads(response.text)
+
         if result.get('data'):
-            for movie in result['data']:
+            for movie in result['data'][0:1]:
                 yield Request(
                     url=movie['url'],
                     meta={'data': movie},
@@ -113,6 +114,13 @@ class DoubanMovieSpider(scrapy.Spider):
         )
 
         for each in genre:
+
+            item_genre = items.Genre()
+            item_genre['name'] = each
+            item_genre['foreign_name'] = 'rio'
+            item_genre['description'] = each
+            yield item_genre
+
             item_movie_genre_relation = items.MovieGenreRelation()
             item_movie_genre_relation['movie_id'] = movie.get('id')
             item_movie_genre_relation['genre'] = each
@@ -185,7 +193,7 @@ class DoubanMovieSpider(scrapy.Spider):
                                'sort=new_score&' \
                                'status=P'
 
-        for page in range(50):
+        for page in range(20):
             yield Request(
                 url=comment_url_template.format(id=movie.get('id'), num=page * 20),
                 meta={'movie': movie},
@@ -197,8 +205,8 @@ class DoubanMovieSpider(scrapy.Spider):
         review_url_template = 'https://movie.douban.com/subject/' \
                               '{id}/reviews?' \
                               'start={num}'
-
-        for page in range(100):
+        #
+        for page in range(20):
             yield Request(
                 url=review_url_template.format(id=movie.get('id'), num=page * 20),
                 meta={'movie': movie},
@@ -269,14 +277,15 @@ class DoubanMovieSpider(scrapy.Spider):
         yield item_directorScreenwriter
 
     def parse_trailer_page(self, response):
+
         count = response.meta['count']
         trailer_list = response.xpath('//*[@class="pr-video"]/@href').extract()
+        item_movie = response.meta['movieItem']
+        item_movie['trailer'] += response.xpath('//*/source/@src').extract_first() + ' '
+        count += 1
         if len(trailer_list) <= count or count == 3:
             yield response.meta['movieItem']
         else:
-            item_movie = response.meta['movieItem']
-            item_movie['trailer'] += response.xpath('//*/source/@src').extract_first() + ' '
-            count += 1
             yield Request(
                 url=trailer_list[count],
                 headers=self.header,
@@ -285,6 +294,7 @@ class DoubanMovieSpider(scrapy.Spider):
             )
 
     def parse_movie_comment_douban(self, response):
+
         logging.info('------------------------------解析 短评界面，储存Comment、User等Item--------------------------------')
 
         movie = response.meta['movie']
@@ -292,15 +302,16 @@ class DoubanMovieSpider(scrapy.Spider):
 
         for each in comment_list:
             username = each.xpath('.//*[@class="avatar"]/a/@title').extract_first()
-            url_douban = each.xpath('//*[@class="avatar"]/a/@href').extract_first()
+            url_douban = each.xpath('.//*[@class="avatar"]/a/@href').extract_first()
             user_id_douban = url_douban.split('/')[-2]
             icon = each.xpath('.//*[@class="avatar"]/a/img/@src').extract_first()
             votes_raw = each.xpath('.//*[@class="votes"]/text()').extract_first()
             votes = int(votes_raw.strip()) if votes_raw else 0
             rate_raw = each.xpath('.//*[contains(@class,"allstar")]/@class').extract_first()
             rate = int(rate_raw[7]) if rate_raw else None
-            comment_date = each.xpath('.//*[@class="comment-time "]/@title').extract_first().split(' ')[0]
-            comment_content = each.xpath('.//*[@class="short"]/text()').extract_first()
+            date = each.xpath('.//*[@class="comment-time "]/@title').extract_first().split(' ')[0]
+            content_raw = each.xpath('.//*[@class="short"]/text()').extract_first()
+            content = emoji.demojize(content_raw)
 
             user = {
                 'username': username,
@@ -320,8 +331,8 @@ class DoubanMovieSpider(scrapy.Spider):
             item_comment['user_id'] = user_id_douban
             item_comment['movie_id'] = movie['id']
             item_comment['rate'] = rate
-            item_comment['content'] = comment_content
-            item_comment['date'] = comment_date
+            item_comment['content'] = content
+            item_comment['date'] = date
             item_comment['votes'] = votes
             yield item_comment
 
